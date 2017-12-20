@@ -224,3 +224,37 @@ else if (bill<100)
     printf("%f",bill);
 }
 }
+
+13)check weather a triangle is equilateral,isosseles or scalene
+#include<stdio.h>
+
+int main() {
+   int x,y,z;
+   scanf("%d%d%d",&x,&y,&z);
+   if(x==y && y==z && z==x)
+   printf("its equilateral");
+   else if(x!=y && y!=z && z!=x)
+   printf("its scalene");
+   else
+   printf("its isosseles");
+}
+
+
+14)check weather a character is an alphabet,numeric or special character
+#include<stdio.h>
+
+int main() {
+    char ch;
+       
+    
+    scanf("%c",&ch);
+
+    if((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z'))
+        printf("nYou have entered an alphabet");
+    else
+        if(ch>='0'&&ch<='9')
+            printf("nYou have entered a digit");
+        else
+            printf("nYou have entered a special character");
+
+}
