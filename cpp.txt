@@ -303,3 +303,139 @@ int main()
     ob.display();
     return 0;
 }  
+
+#include <iostream>
+using namespace std;
+
+double division(int a, int b) {
+   if( b == 0 ) {
+      throw "Division by zero condition!";
+   }
+   return (a/b);
+}
+
+int main () {
+   int x = 50;
+   int y = 0;
+   double z = 0;
+ 
+   try {
+      z = division(x, y);
+      cout << z << endl;
+   } catch (const char* msg) {
+     cerr << msg << endl;
+   }
+
+   return 0;
+}
+
+2)
+
+#include<iostream>
+
+using namespace std;
+
+class shape
+{
+  
+  public:
+  
+  virtual void draw()=0;
+   
+ 
+};
+
+class rectangle: shape
+
+{
+    
+public:
+  
+  void draw(){
+   
+     cout<<"drawing rectangle";
+        
+ 
+    }
+
+};
+
+class circle: shape
+
+{
+    public:
+  
+  void draw()
+   
+ {
+        cout<<"drawing circle";
+ 
+   }
+
+};
+
+int main()
+{
+   
+ 
+    rectangle rec;
+ 
+   circle cir;
+   
+ rec.draw();
+   
+ cir.draw();
+
+
+}
+
+3)
+#include <iostream>
+using namespace std;
+
+template <class T>
+inline T square(T x)
+{
+   T result;
+   result = x * x;
+   return result;
+};
+
+
+
+main()
+{
+   int    i, ii;
+   float  x, xx;
+   double y, yy;
+
+   i = 2;
+   x = 2.2;
+   y = 2.2;
+
+   ii = square<int>(i);
+   cout << i << ": " << ii << endl;
+
+   xx = square<float>(x);
+   cout << x << ": " << xx << endl;
+
+   // Explicit use of template
+   yy = square<double>(y);
+   cout << y << ": " << yy << endl;
+
+   // Implicit use of template
+   yy = square(y);
+   cout << y << ": " << yy << endl;
+}
+4)
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+ char a='a';
+    char b='b';
+    char s[10];
+    char z[]={a,b};
+    cout<<strcat(s,z);
+}
